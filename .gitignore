@@ -1,0 +1,25 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Archives
+*.rar
+*.zip
+*.7z
+
+# Data directory
+/subtitle-backup/
+
+# Script outputs
+encodings.json
+filename_fix_report.json
+
+# Rust
+/target

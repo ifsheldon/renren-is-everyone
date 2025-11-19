@@ -1,0 +1,19 @@
+[project]
+name = "renrenyingshi"
+version = "0.1.0"
+description = "Scripts for cleaning up subtitle files from renrenyingshi"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "chardet>=5.2.0",
+    "py7zr>=1.0.0",
+    "rarfile>=4.2",
+    "tqdm>=4.67.1",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.1.0",
+    "poethepoet>=0.37.0",
+    "ruff>=0.14.4",
+]
