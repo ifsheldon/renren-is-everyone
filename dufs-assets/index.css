@@ -256,52 +256,52 @@ body {
   }
 }
 
-/* dark theme */
+/* dark theme (warm white) */
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #000;
+    background-color: #f8ebc7;
   }
 
   html,
   .breadcrumb>b,
   .searchbar #search {
-    color: #fff;
+    color: #24292e;
   }
 
   .uploaders-table th,
   .paths-table th {
-    color: #ddd;
+    color: #5c5c5c;
   }
 
   svg,
   .path svg,
   .breadcrumb svg {
-    fill: #fff;
+    fill: rgba(3, 47, 98, 0.5);
   }
 
   .head {
-    background-color: #111;
+    background-color: #fff5d5;
   }
 
   .searchbar {
-    background-color: #111;
-    border-color: #fff6;
+    background-color: #f4ebd4;
+    border-color: #ddd;
   }
 
   .searchbar svg {
-    fill: #fff6;
+    fill: #9a9a9a;
   }
 
   .path a {
-    color: #3191ff;
+    color: #0366d6;
   }
 
   .paths-table tbody tr:hover {
-    background-color: #1a1a1a;
+    background-color: #f6ebcf;
   }
 
   .editor {
-    background: black;
-    color: white;
+    background: #f8f3e5;
+    color: #24292e;
   }
 }

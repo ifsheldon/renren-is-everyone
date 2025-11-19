@@ -443,6 +443,12 @@ function renderPathsTableBody() {
 function addPath(file, index) {
   const encodedName = encodedStr(file.name);
   let url = newUrl(file.name);
+  const SUBTITLE_EXTS = [".ass", ".srt", ".ssa", ".sub", ".sup"];
+  const ext = extName(file.name).toLowerCase();
+  let mainUrl = url;
+  if (SUBTITLE_EXTS.includes(ext)) {
+    mainUrl += "?view";
+  }
   let actionDelete = "";
   let actionDownload = "";
   let actionMove = "";
@@ -493,7 +499,7 @@ function addPath(file, index) {
     ${getPathSvg(file.path_type)}
   </td>
   <td class="path cell-name">
-    <a href="${url}" ${isDir ? "" : `target="_blank"`}>${encodedName}</a>
+    <a href="${mainUrl}" ${isDir ? "" : `target="_blank"`}>${encodedName}</a>
   </td>
   <td class="cell-mtime">${formatMtime(file.mtime)}</td>
   <td class="cell-size">${sizeDisplay}</td>
