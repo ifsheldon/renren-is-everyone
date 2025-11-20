@@ -19,6 +19,8 @@ export const metadata: Metadata = {
   description: "Subtitles from Ren Ren Ying Shi",
 };
 
+import { Footer } from "@/components/Footer";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -30,6 +32,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <Footer />
         <Script
           src="https://umami.reify.ing/script.js"
           data-website-id="a862a4a6-ff56-4191-ba1f-68ea80244c82"
