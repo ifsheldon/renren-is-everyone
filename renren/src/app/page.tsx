@@ -1,6 +1,6 @@
-import { getSubtitleFiles } from '@/lib/files';
-import { FileExplorer } from '@/components/FileExplorer';
-import { LanguageSwitcher } from '@/components/LanguageSwitcher';
+import { FileExplorer } from "@/components/FileExplorer";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { getSubtitleFiles } from "@/lib/files";
 
 export default async function Home() {
   const files = await getSubtitleFiles();
