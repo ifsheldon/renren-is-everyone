@@ -1,8 +1,33 @@
-# Subtitle Cleanup Tools
+# Ren Ren is Everyone
+
+Project website is [renren.alittlemagic.studio](https://renren.alittlemagic.studio).
+
+## Download Subtitles
+
+* Original subtitles can be downloaded with Resilio Sync with the key `BNMCIUVQAKGNAQITZOJSERISPZHZWA2X7`
+* Cleaned subtitles can be downloaded with Resilio Sync with the key `BFPXVGTDY2PK5PPYKP4HCN6CYG5JYFQGE`
+
+## Frontend
+
+In [renren](./renren)
+
+### Build
+
+```bash
+bun install
+
+bun run build
+
+bun dev
+
+bun run start
+```
+
+## Subtitle Cleanup Tools
 
 This repository contains a collection of Python and Rust scripts designed to clean up, organize, and fix encoding issues in a subtitle backup from Renren Yingshi.
 
-## Cleaning done
+### Cleaning done
 
 - clean useless files other than subtitle files
 - clean empty directories and files that are <= 10 bytes
@@ -12,12 +37,7 @@ This repository contains a collection of Python and Rust scripts designed to cle
 - detect encodings of all subtitle files, see [the script](detect_text_encoding.ipynb) for details
 - remove all .DS_Store files
 
-## Download Subtitles
-
-* Original subtitles can be downloaded with Resilio Sync with the key `BNMCIUVQAKGNAQITZOJSERISPZHZWA2X7`
-* Cleaned subtitles can be downloaded with Resilio Sync with the key `BFPXVGTDY2PK5PPYKP4HCN6CYG5JYFQGE`
-
-## Getting Started
+### Getting Started
 
 **CRITICAL:** These scripts are designed to work with a folder named `subtitle-backup` in the current directory.
 
@@ -27,28 +47,25 @@ This repository contains a collection of Python and Rust scripts designed to cle
     ```
 2.  Run the scripts from the project root.
 
-## Prerequisites
+### Prerequisites
 
 - **Python 3.12+**
 - **Rust** (latest stable)
 - **System Tools**:
   - `unrar` (required for extracting `.rar` files with `unzip_all.py`). On macOS: `brew install unrar`.
 
-## Installation
+### Installation
 
-### Python Dependencies
+#### Python Dependencies
 
 This project uses `uv` or standard `pip` with `pyproject.toml`.
 
 ```bash
 # Using uv (recommended)
 uv sync
-
-# Or using pip
-pip install .
 ```
 
-### Build Rust Tool
+#### Build Rust Tool
 
 Build the subtitle processor binary:
 
@@ -56,11 +73,11 @@ Build the subtitle processor binary:
 cargo build --release
 ```
 
-## Usage
+### Usage
 
 All scripts operate on the `./subtitle-backup/` directory by default.
 
-### Python Scripts
+#### Python Scripts
 
 1.  **`unzip_all.py`**
     Recursively finds and extracts `.zip`, `.rar`, and `.7z` archives inside `subtitle-backup`.
@@ -97,7 +114,7 @@ All scripts operate on the `./subtitle-backup/` directory by default.
     - _Deletes_: Empty directories.
     - _Run_: `python delete_empty.py`
 
-### Rust Tool (`subtitle-processor`)
+#### Rust Tool (`subtitle-processor`)
 
 High-performance encoding detection and transcoding tool.
 
@@ -114,3 +131,6 @@ Reads `encodings.json` and converts files to UTF-8 (skips files already in UTF-8
 ```bash
 cargo run --release -- --transcode
 ```
+
+## LICENSE
+[MIT](LICENSE)
