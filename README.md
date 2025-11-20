@@ -15,7 +15,7 @@ This repository contains a collection of Python and Rust scripts designed to cle
 ## Download Subtitles
 
 * Original subtitles can be downloaded with Resilio Sync with the key `BNMCIUVQAKGNAQITZOJSERISPZHZWA2X7`
-* Cleaned subtitles can be downloaded with Resilio Sync with the key `TODO`
+* Cleaned subtitles can be downloaded with Resilio Sync with the key `BFPXVGTDY2PK5PPYKP4HCN6CYG5JYFQGE`
 
 ## Getting Started
 
